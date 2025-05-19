@@ -1,0 +1,165 @@
+/* General App Layout */
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef6e4; /* soft warm cream */
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 220px;
+  background-color: #fff4e6; 
+  padding: 1rem 1.2rem;
+  border-right: 1px solid #ffd8b1; 
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 6px rgba(255, 179, 71, 0.15);
+}
+
+/* Sidebar Header */
+.sidebar h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #b3522e; 
+  user-select: none;
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Sidebar Items */
+.sidebar li {
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #a15a32; 
+  user-select: none;
+}
+
+.sidebar li:hover {
+  background-color: #ffe5b4; 
+  color: #7a3e16; 
+}
+
+.sidebar li.active {
+  background-color: #fff9f0; 
+  border-left: 4px solid #ff9f1c; 
+  font-weight: 700;
+  color: #61380b; 
+}
+
+/* Upload Input (Hidden) */
+.upload-input {
+  display: none;
+}
+
+/* Upload Button */
+.upload-button {
+  margin-top: auto;
+  padding: 0.5rem 1.2rem;
+  background-color: #ff9f1c; 
+  color: #fff9f0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: auto;
+  box-shadow: 0 3px 8px rgba(255, 159, 28, 0.5);
+  user-select: none;
+}
+
+.upload-button:hover {
+  background-color: #cc7a14; 
+  box-shadow: 0 4px 12px rgba(204, 122, 20, 0.6);
+}
+
+/* Upload Message */
+.upload-message {
+  margin-top: 0.75rem;
+  color: #2a5d34; 
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Main Panel */
+.main-panel {
+  margin-left: 220px;
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100vh;
+  background-color: #fffaf0; 
+  box-shadow: inset 0 0 10px rgba(255, 159, 28, 0.1);
+  user-select: text;
+}
+
+/* Document Title */
+.main-panel h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: #804000;
+  font-weight: 700;
+}
+
+/* Document Chunks */
+.chunk {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  color: #7b4f24; 
+}
+
+.chunk:hover {
+  background-color: #fff0d6; 
+}
+
+.chunk.active {
+  background-color: #ffe5b4; 
+  border-left: 4px solid #ff9f1c; 
+  font-weight: 700;
+  color: #61380b; 
+}
+
+.chunk-number {
+  background-color: #fff3db; 
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  margin-right: 1rem;
+  color: #b36f24; 
+  min-width: 36px;
+  text-align: center;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.chunk-content {
+  flex: 1;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #6b4c17; 
+  user-select: text;
+}
