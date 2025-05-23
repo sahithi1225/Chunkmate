@@ -1,16 +1,34 @@
-<<<<<<< HEAD
-# React + Vite
+# Chunk Mate
+## Project Structure
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* The frontend is built using React and styled-components.
+* The backend is developed using Node.js with the Express.js framework.
+* PostgreSQL is used to store document data, chunked content, and hyperlink references.
 
-Currently, two official plugins are available:
+## Steps to Set Up and Run the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Step 1: Set Up and Run the Frontend
 
-## Expanding the ESLint configuration
+1. Navigate to the frontend directory using your terminal.
+2. Install all required dependencies using a package manager like npm or yarn.
+3. Start the development server.
+4. The React app will typically run on localhost at port 5173 or 3000 depending on your setup.
+5. Ensure that the backend server is also running to handle file uploads and data fetching.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Chunkmate
->>>>>>> 9109846e3e6b0c41e81b16a3364f7fbe8a349e89
+### Step 2: Start the Backend Server
+
+1. Go to the backend directory from your terminal.
+2. Install backend dependencies using a package manager.
+3. Ensure the environment variables such as the database connection URL or credentials are properly configured in an environment file.
+4. Start the backend server using a Node.js process manager or command line.
+5. The backend server will listen on a specific port (typically 5000) and expose endpoints for file upload and database interaction.
+
+### Step 3: Initialize and Connect to the PostgreSQL Database
+
+1. Install PostgreSQL on your machine if it is not already installed.
+2. Open a PostgreSQL client such as psql or pgAdmin.
+3. Create a new database for the project.
+4. Use the SQL schema file or provided table creation statements to define the structure of tables such as documents, chunks, and hyperlinks.
+5. Ensure that the backend is connected to the database by correctly configuring the database connection string or settings in the backend application.
+6. Verify that the tables are created successfully and test inserting or retrieving data through the backend.
+
